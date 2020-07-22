@@ -41,7 +41,7 @@ public class UserControllerTests {
         Assert.assertEquals("user name --------->", user.getName(), "user_master");
         Assert.assertEquals("user password --------->", user.getPassword(), "1234");
         Assert.assertTrue("user account balance --------->", user.getBalance() == 100);
-        Assert.assertEquals("order name --------->", order.getName(), "order_slave");
+        Assert.assertEquals("order name --------->", order.getName(), "order_master");
         Assert.assertTrue("order price --------->", order.getPrice() == 100);
     }
 
