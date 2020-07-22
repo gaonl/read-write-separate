@@ -1,0 +1,2 @@
+consumerContextFilter=com.zoe.common.rw.dubbo.ConsumerContextFilter
+providerContextFilter=com.zoe.common.rw.dubbo.ProviderContextFilter
