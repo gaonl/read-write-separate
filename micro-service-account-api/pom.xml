@@ -63,12 +63,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.zoe.common</groupId>
-            <artifactId>zoe-common-rw</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
         <!-- dubbo required jars start -->
         <dependency>
             <groupId>org.jboss.netty</groupId>
