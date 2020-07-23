@@ -13,7 +13,7 @@ public class RWAspect {
      * 环绕通知 @ReadOnly
      */
     @Around("@annotation(com.zoe.common.rw.annotation.ReadOnly)")
-    public Object beforeReadOnly(ProceedingJoinPoint point) {
+    public Object readOnly(ProceedingJoinPoint point) {
         return doAround(MasterSlaveEnum.SLAVE.getName(), point);
     }
 
@@ -21,7 +21,7 @@ public class RWAspect {
      * 环绕通知 @Master
      */
     @Around("@annotation(com.zoe.common.rw.annotation.Master)")
-    public Object beforeMaster(ProceedingJoinPoint point) {
+    public Object master(ProceedingJoinPoint point) {
         return doAround(MasterSlaveEnum.MASTER.getName(), point);
     }
 
@@ -29,7 +29,7 @@ public class RWAspect {
      * 环绕通知 @Slave
      */
     @Around("@annotation(com.zoe.common.rw.annotation.Slave)")
-    public Object before(ProceedingJoinPoint point) {
+    public Object slave(ProceedingJoinPoint point) {
         return doAround(MasterSlaveEnum.SLAVE.getName(), point);
     }
 
