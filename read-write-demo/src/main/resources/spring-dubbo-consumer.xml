@@ -11,8 +11,11 @@
     <!-- 使用zookeeper注册中心暴露服务地址 -->
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
 
+    <!--
+    Filter已经打上标签了，这边可以不用配置了
     <dubbo:provider filter="providerContextFilter"/>
     <dubbo:consumer filter="consumerContextFilter"/>
+    -->
 
     <!-- 当ProtocolConfig和ServiceConfig某属性没有配置时,采用此缺省值 -->
     <dubbo:reference interface="com.zoe.user.service.UserService" id="userService" check="false"/>

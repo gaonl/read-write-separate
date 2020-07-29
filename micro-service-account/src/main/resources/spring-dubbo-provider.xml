@@ -17,8 +17,12 @@
 
 
     <!-- 当ProtocolConfig和ServiceConfig某属性没有配置时,采用此缺省值 -->
+    <dubbo:provider timeout="30000" threadpool="fixed" threads="100" accepts="1000"/>
+
+    <!--
+    Filter已经打上标签了，这边可以不用配置了
     <dubbo:provider timeout="30000" threadpool="fixed" threads="100" accepts="1000" filter="providerContextFilter"/>
     <dubbo:consumer filter="consumerContextFilter"/>
-
+    -->
     <dubbo:service retries="0" interface="com.zoe.account.service.AccountService" ref="accountService"/>
 </beans>
