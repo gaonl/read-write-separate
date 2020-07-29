@@ -4,10 +4,15 @@ import com.zoe.common.rw.annotation.MasterSlaveEnum;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
+@Order(-100)
+/**
+ * 将自定义的切面序号设置一个很小的值，保证排在spring数据库事务切面之前执行
+ */
 public class RWAspect {
     /**
      * 环绕通知 @ReadOnly

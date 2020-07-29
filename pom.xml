@@ -15,7 +15,7 @@
 		<module>micro-service-order-api</module>
 		<module>micro-service-user</module>
 		<module>micro-service-user-api</module>
-		<!--<module>read-write-demo</module>-->
-		<!--<module>zoe-common-rw</module>-->
+		<module>read-write-demo</module>
+		<module>zoe-common-rw</module>
 	</modules>
 </project>

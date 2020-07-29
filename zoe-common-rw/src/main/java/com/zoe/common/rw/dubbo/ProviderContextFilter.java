@@ -1,15 +1,14 @@
 package com.zoe.common.rw.dubbo;
 
+import com.alibaba.dubbo.common.Constants;
 import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.*;
 import com.zoe.common.rw.DataSourceNameHolder;
-import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.Map;
 
-@Activate(group = "PROVIDER")
-@Component
+@Activate(group = Constants.PROVIDER, order = -9999)
 public class ProviderContextFilter implements Filter {
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
