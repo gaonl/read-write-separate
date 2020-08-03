@@ -16,7 +16,7 @@ public class ConsumerContextFilter implements Filter {
         } catch (RpcException e) {
             throw e;
         } finally {
-            RpcContext.getContext().clearAttachments();
+            RpcContext.getContext().removeAttachment(DataSourceNameKey.KEY);
         }
         return result;
     }
